@@ -1,0 +1,64 @@
+<ng-sidebar-container>
+	<ng-sidebar opened="true" position="left" id="right-sidebar" mode="push" [autoCollapseWidth]="799">
+	<!-- Ai posteri: in caso voleste inserire nuovo contenuto nella sidebar, questo è il posto -->
+	<ul class="noIndent" align="left">
+		<!-- Utilizziamo questo trick per evitare di rendere visibile l'autofocus al lettore. -->
+		<li style="display:none">
+			<button autofocus="autofocus"></button>
+		</li>
+		<li>
+			<button class="btn btn-outline-info" (click)="goTo('futuri')">
+				Eventi Futuri
+			</button>
+		</li>
+		<li>
+			<button class="btn btn-outline-info" (click)="goTo('passati')">
+				Eventi Passati
+			</button>
+		</li>
+	</ul>
+	</ng-sidebar>
+	<div ng-sidebar-content class="container bottomExtra">
+		<br>
+		<div class="px-3 py-3">
+			<h3>De Cifris Mediolanensibus</h3>
+			<p>Il ciclo di seminari De Cifris Mediolanensibus presenta risultati 
+				di ricerca nell'ambito della crittografia e applicazioni. I seminari saranno 
+				tenuti da esperti nazionali e internazionali, in lingua inglese e italiana, 
+				e saranno aperti a tutti. </p>
+			<b>Comitato organizzatore</b>:
+			<ul>
+				<li> Francesca Dalla Volta, Università di Milano Bicocca;</li>
+				<li> Alberto Leporati, Università di Milano Bicocca;</li>
+				<li> Giacomo Verticale, Politecnico di Milano;</li>
+			<li> Andrea Visconti, Università di Milano.</li>
+			</ul>
+			<hr>
+			<h4 id="futuri"><a (click)="mostraAttivita('futuri')">Seminari futuri</a></h4>
+			<div *ngIf="attivitaDaMostrare=='futuri'">
+				<!-- Eventi futuri qua -->
+			</div>
+			<hr>
+			<h4 id="passati"><a (click)="mostraAttivita('passati')">Seminari passati</a></h4>
+			<div *ngIf="attivitaDaMostrare=='passati'">
+				<ul>
+					<li>
+						<b>9 Dicembre 2020</b>
+						<ul>
+							<li>
+								<b>Lorenzo Grassi</b> -- University of Technology of Graz: <br>
+								<i>Symmetric-Key Encryption Schemes for MPC Applications</i>.<br>
+								<a href="../../../../assets/attivita/seminariLocali/deCifrisMediolanensibus/09.12.2020-Grassi.pdf"> Locandina</a> -- 
+								<a href="../../../../assets/attivita/seminariLocali/deCifrisMediolanensibus/slide_Grassi.pdf"> Slide</a> --
+								<a href="https://youtu.be/fH82NrsJgE4">Video</a>.
+								<br>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<hr>
+		</div>
+	</div>
+</ng-sidebar-container>
+

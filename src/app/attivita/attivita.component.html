@@ -1,0 +1,75 @@
+
+<ng-sidebar-container>
+	<ng-sidebar opened="true" position="left" id="right-sidebar" mode="push" [autoCollapseWidth]="799">
+		<ul class="noIndent" align="left">
+			<li style="display:none">
+				<button autofocus="autofocus"></button>
+			</li>
+			<li>
+				<button class="btn btn-outline-info" routerLink="/seminariLocali">Seminari Locali</button>
+			</li>
+			<li>
+				<button class="btn btn-outline-info" routerLink="/cifrisChain">Cifris Chain</button>
+			</li>
+			<li>
+				<button class="btn btn-outline-info" routerLink="/PQCifris">PQ Cifris</button>
+			</li>
+			<li>
+				<button class="btn btn-outline-info" routerLink="/cifrisCloud">Cifris Cloud</button>
+			</li>
+			<li>
+				<button class="btn btn-outline-info" routerLink="/mathCifris">MathCifris</button>
+			</li>
+		</ul>
+	</ng-sidebar>
+	<div ng-sidebar-content class="container bottomExtra">
+		<br>
+		<div class="mt-3">
+			<div class="row">
+				<div class="col-md-12">
+					<h3>ATTIVITÀ</h3>
+					<p>Le attività della De Cifris comprendono il finanziamento di borse per la crittografia, 
+					la gestione di riviste scientifiche e divulgative, l'organizzazione di altre iniziative 
+					divulgative ed eventi pubblici qualificanti, tra cui un convegno annuale di crittografia 
+					a livello nazionale e numerosi seminari locali, e si articolano anche in gruppi tematici: 
+					CifrisChain - PQCifris - CifrisCloud - MathCifris.
+					Tra le iniziative in Gare e divulgazione è presente il nuovo salotto online "Immuni... e Contenti?", 
+					dedicato al tema del contact tracing. </p>
+					<p>Tra le nostre attivitè segnaliamo: </p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<ul>
+						<li>La stesura del libro: <a class="toggleText" (click)="mostraTesi()">100 tesi di Crittografia e Codici in Italia 2008-2017.</a>
+							<div *ngIf="tesiVisibili">
+								<app-cento-tesi></app-cento-tesi>
+							</div>
+						</li>
+						<li>Il finanziamento di <a [routerLink]="['/opportunita']" fragment="borseAdvisoryBoard">borse</a> per la crittografia, da assegnare in maniera competitiva su base nazionale: </li>
+						<ul>
+							<li>borse per studenti triennali o magistrali.</li>
+							<li>borse di dottorato.</li>
+							<li>assegni di ricerca.</li>
+							<li>premi di laurea o di tesi di dottorato.</li>
+						</ul>
+						<li>La creazione e gestione di <b>riviste scientifiche</b> di standing internazionale (in Inglese), in tutte e 
+							tre le classi accademiche della De Cifris (MAT-INF-ING).</li>
+						<li>La creazione e gestione di <b>riviste divulgative</b> (in Italiano) e altre 
+							<a routerLink="/iniziativeDivulgative" href="#">iniziative divulgative</a>, come 
+							siti web, <a routerLink="/gareCrittografiche" href="#">gare crittografiche/hackaton</a>,
+							<a routerLink="/eventi" href="#">eventi pubblici</a>.</li>
+						<li>Il coordinamento di <b>progetti applicativi</b>, permettendo il coinvolgimento di numerose sedi e studiosi.</li>
+						<li>L'organizzazione di un <b>convegno annuale</b> di crittografia a livello nazionale.</li>
+					</ul>
+				</div>
+			</div>
+			<hr>
+		</div>
+	</div>
+</ng-sidebar-container>
+
+
+
+
+

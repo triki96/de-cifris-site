@@ -1,0 +1,24 @@
+h4{
+	color:rgb(23, 162, 184);
+}
+
+button{
+	background:none;
+	border:none;
+	outline:none;
+	color:#007bff;
+}
+
+.center {
+	text-align: left;
+	margin: auto;
+	/* width: 80%; */
+ }
+
+ a{
+	cursor: pointer;
+}
+
+.toggleText{
+	color: #1976D2;
+}

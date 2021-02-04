@@ -1,0 +1,248 @@
+<ng-sidebar-container>
+	<ng-sidebar opened="true" position="left" id="right-sidebar" mode="push" [autoCollapseWidth]="799">
+	<!-- Ai posteri: in caso voleste inserire nuovo contenuto nella sidebar, questo è il posto -->
+	<ul class="noIndent" align="left">
+		<!-- Utilizziamo questo trick per evitare di rendere visibile l'autofocus al lettore. -->
+		<li style="display:none">
+			<button autofocus="autofocus"></button>
+		</li>
+		<li>
+			<button class="btn btn-outline-info" (click)="goTo('futuri')">
+				Eventi Futuri
+			</button>
+		</li>
+		<li>
+			<button class="btn btn-outline-info" (click)="goTo('passati')">
+				Eventi Passati
+			</button>
+		</li>
+	</ul>
+	</ng-sidebar>
+	<div ng-sidebar-content class="container bottomExtra"> 
+		<br>
+		<div class="px-3 py-3">
+			<h3>De Cifris Schola Latina </h3>
+			<b>Comitato organizzatore</b>:
+			<ul>
+				<li> Riccardo Aragona, Università dell'Aquila, Dipartimento di Ingegneria e Scienze	dell'Informazione e Matematica;</li>
+				<li>  Marco Pedicini, Università dedli Studi Roma Tre, Dipartimento di Matematica e Fisica;</li>
+				<li> Daniele Venturi, Sapienza Università di Roma, Dipartimento di Infomatica.</li>
+				<li>  Giulio Codogni, Università	Tor Vergata, Dipartimento di Matematica;</li>
+			</ul>
+			<hr>
+			<h4 id="futuri"><a (click)="mostraAttivita('futuri')">Seminari futuri</a></h4>
+			<div *ngIf="attivitaDaMostrare=='futuri'">
+				<p class="warning">Avviso: causa dell'emergenza Coronavirus (Covid-19) organizzeremo i prossimi eventi in webinar. </p>
+			</div>
+			<hr>
+			<h4 id="passati"><a (click)="mostraAttivita('passati')">Seminari passati</a></h4>
+			<div *ngIf="attivitaDaMostrare=='passati'">
+				<ul>
+					<li>
+						<b>18 Dicembre 2020</b>
+						<p>Dipartimento di Matematica e Fisica,  Università di Roma Tre</p>
+						<ul>
+							<li>
+								<b>Ilaria Chillotti</b> -- Zama (Paris): 
+								<br>
+								<i>Introduction to FHE and applications to machine learning</i>.<br>
+								<a href="../../../../assets/attivita/seminariLocali/deCifrisScholaLatina/Chillotti_Locandina.pdf"> Locandina</a>
+							</li>      
+					  </ul>
+					</li>
+					<br>
+					<li>
+						<b>14 Dicembre 2020</b>
+						<p>Università Roma Tor Vergata</p>
+						<ul>
+							<li>
+								<b>Edoardo Persichetti</b> -- Florida Atlantic University: <br>
+								<i>Code-based Cryptography and Post-Quantum Standardization</i>.<br>
+								<a href="../../../../assets/attivita/seminariLocali/deCifrisScholaLatina/14.12.2020-Persichetti.pdf"> Locandina</a> --
+								<a href="../../../../assets/attivita/seminariLocali/deCifrisScholaLatina/slide_Persichetti.pdf"> Slide</a>
+							</li>      
+						</ul>
+					</li>
+					<br>
+					<li>
+						<b>12 - 13 ottobre 2020</b>
+						<br>
+						<p>Università di Roma La Sapienza</p>
+						<ul>
+							<li> 
+								<b>Gianluca Brian</b> -- Università di Roma La Sapienza: <br>
+								<i>Leakage-Resilient Non-Malleable Secret Sharing</i>.<br>
+								<a href='../../../../assets/attivita/seminariLocali/deCifrisScholaLatina/GianlucaBrian_locandina.pdf' style="color: #000080;">Locandina</a> -- 
+								<a href="../../../../assets/attivita/seminariLocali/deCifrisScholaLatina/13.10.2020-BRIAN-1.pdf">Slide 1</a> -- 
+								<a href="../../../../assets/attivita/seminariLocali/deCifrisScholaLatina/14.10.2020-BRIAN-2.pdf">Slide 2</a><br>
+							</li>
+						</ul>
+					</li>
+					<br>
+					<li>
+						<b>25 settembre 2020</b>
+						<p>Università de L'Aquila - Dipartimento di Ingegneria e Scienze dell'Informazione e Matematica</p>
+						  <ul>
+							<li>
+								<b>Ciro Bologna</b> -- Identity and Access Management Engineer:<br>
+								<i>Open Banking: secure sharing of your financial data with OpenID Connect protocol</i>.<br>
+								<a href='../../../../assets/attivita/seminariLocali/deCifrisScholaLatina/CiroBologna_locandina.pdf' style="color: #000080;">Locandina</a> -- 
+								<a href="../../../../assets/attivita/seminariLocali/deCifrisScholaLatina/25.09.2020_Bologna.pdf">Slide</a> -- 
+								<a href="https://youtu.be/Tifh86W1SRg">Video</a><br>
+							 </li>
+					  </ul>
+					</li>
+					<br>
+					<li>
+						<b>3 luglio 2020</b>
+						<p>Dipartimento di Matematica e Fisica,  Università di Roma Tre</p>
+						  <ul>
+							<li>
+								<b>Francesco Pasquale</b> -- Università Roma Tor Vergata:<br>
+								<i>Stabilization and expansion of simple dynamic random graph models for Bitcoin-like unstructured P2P network</i>.<br>
+								<a href='../../../../assets/attivita/seminariLocali/deCifrisScholaLatina/locandina_Pasquale.pdf' style="color: #000080;">Locandina</a> -- 
+								<a href="../../../../assets/attivita/seminariLocali/deCifrisScholaLatina/F_Pasquale-slide.pdf">Slide</a><br>
+							</li>
+					  </ul>
+					 </li>
+					<br>
+					<li>
+						<b>26 febbraio 2020</b>
+						<p>Dipartimento di Matematica e Fisica,  Università di Roma Tre</p>
+						  <ul>
+							<li>
+								<b>Roberto Civino</b> -- Università de L'Aquila:<br>
+								<i>Differential attacks using alternative operations</i>.<br>
+								<a href='../../../../assets/attivita/seminariLocali/deCifrisScholaLatina/Roberto-Civino-ScholaLatina.pdf' style="color: #000080;">Locandina</a>
+								<!-- -- <a href="./seminari_2020/slide/latina/07/F_Pasquale-slide.pdf"> Slide</a> --><br>
+							</li>
+					  </ul>
+					 </li>
+					 <br>
+					<li>
+						<b>27 gennaio 2020</b>
+						<p>Dipartimento di Matematica e Fisica,  Università di Roma Tre</p>
+						  <ul>
+							<li>
+								<b>Andrea Visconti</b> -- Università di Milano:<br>
+								<i>SSL/TLS cryptographic protocols and their weaknesses</i>.<br>
+								<a href='../../../../assets/attivita/seminariLocali/deCifrisScholaLatina/Visconti-27.01.2020.pdf' style="color: #000080;">Locandina</a> -- 
+								<a href="../../../../assets/attivita/seminariLocali/deCifrisScholaLatina/AVISCONTI-slide.pdf">Slide</a><br>
+							</li>
+					  </ul>
+					 </li>
+					 <br>
+					<li>
+						<b>10 dicembre 2019</b>
+						<br>
+						<p>Dipartimento di Matematica e Fisica,  Università di Roma Tre</p>
+						  <ul>
+							<li>
+								<b>Ivan Visconti</b> -- Università di Salerno:<br>
+								<i>Cryptography for Blockchain</i>.<br>
+								<a href="../../../../assets/attivita/seminariLocali/deCifrisScholaLatina/VISCONTI-slide.pdf" style="color: #000080;">Locandina</a> -- 
+								<a href="../../../../assets/attivita/seminariLocali/deCifrisScholaLatina/VISCONTI-slide.pdf">Slide</a><br>
+							</li>
+					  </ul>
+					 </li>
+					 <br>
+					<li>
+						<p><b>21 novembre 2019</b>
+						<p>Dipartimento di Matematica e Fisica,  Università di Roma Tre</p>
+						<ul>
+							<li>
+								<b>Lorenzo Grassi</b> -- IAIK, University of Technology of Graz:<br>
+								<i>SYMMETRIC CRYPTOGRAPHY: DESIGN & CRYPTANALYSIS</i>.<br>
+								<a href='../../../../assets/attivita/seminariLocali/deCifrisScholaLatina/grassi-locandina1.pdf' style="color: #000080;">Locandina</a> -- 
+								<a href="../../../../assets/attivita/seminariLocali/deCifrisScholaLatina/grassi-slide1.pdf">Slide</a><br>
+							</li>
+						</ul>
+					 </li>
+					 <br>
+					<li>
+						<b>22 novembre 2019</b>
+						<p>Dipartimento di Matematica e Fisica,  Università di Roma Tre</p>
+						  <ul>
+							<li>
+								<b>Lorenzo Grassi</b> -- IAIK, University of Technology of Graz:<br>
+								<i>CRYPTANALYSIS OF AES: NEW RESulTS</i>.<br>
+								<a href='../../../../assets/attivita/seminariLocali/deCifrisScholaLatina/grassi-locandina2.pdf' style="color: #000080;">Locandina</a> -- 
+								<a href="../../../../assets/attivita/seminariLocali/deCifrisScholaLatina/grassi-slide2.pdf">Slide</a><br>
+							</li>
+						  </ul>
+					 </li>
+					 <br>
+					<li>
+						<b>10-11 ottobre 2019</b>
+						<br>
+						<p>Dipartimento di Ingegneria e Scienze dell'Informazione e Matematica, Università dell'Aquila</p>
+					  <ul>
+						 <li>
+							<b>Francesco Pasquale</b> -- Università Roma Tor Vergata:<br>
+							<i>First Workshop in Algebra for Cryptography</i>.<br>
+							<a href='../../../../assets/attivita/seminariLocali/deCifrisScholaLatina/workshop-AQ.pdf' style="color: #000080;">Locandina</a><br>
+						 </li>
+					  </ul>
+					 </li>
+					 <br>
+					<li>
+						<b>13 maggio 2019</b>
+						<p>Dipartimento di Matematica e Fisica,  Università di Roma Tre</p>
+						<ul>
+							<li>
+								<b>Luca De Feo</b> -- Università	de Versailles:<br>
+								<i>Isogeny graphs in cryptography: the good, the bad and the ugly</i>.<br>
+								<a href='../../../../assets/attivita/seminariLocali/deCifrisScholaLatina/defeo-locandina.pdf' style="color: #000080;">Locandina</a> -- 
+								<a href="../../../../assets/attivita/seminariLocali/deCifrisScholaLatina/defeo-slide.pdf">Slide</a><br>
+							</li>
+						</ul>
+					</li>
+					<br>
+					<li>
+						<b>14 maggio 2019</b>
+						<p>Dipartimento di Ingegneria e Scienze dell'Informazione e Matematica, Università dell'Aquila</p>
+						<ul>
+							<li>
+								<b>Workshop per studenti</b>:<br>
+								  <br>
+								<i>Crittografia nella Vita Reale</i> -- 
+								<a href="../../../../assets/attivita/seminariLocali/deCifrisScholaLatina/workshop-locandina.pdf" style="color: #000080;">Locadina</a> <br>
+								<a href="../../../../assets/attivita/seminariLocali/deCifrisScholaLatina/cappetta-slide.pdf">SLIDE CAPPETTA E SPADAFORA</a> <br>
+								<a href="../../../../assets/attivita/seminariLocali/deCifrisScholaLatina/fontana-slide.pdf">SLIDE FONTANA</a> <br>
+								<a href="../../../../assets/attivita/seminariLocali/deCifrisScholaLatina/tarquini-slide.pdf">SLIDE TARQUINI</a> <br>
+								<a href="../../../../assets/attivita/seminariLocali/deCifrisScholaLatina/rosati-slide.pdf">SLIDE ROSATI</a><br>
+								<a href="../../../../assets/attivita/seminariLocali/deCifrisScholaLatina/carolla-slide.pdf">SLIDE CAROLLA</a> <br>
+						 </li>
+					  </ul>
+					 </li>
+					 <br>
+					<li>
+						<b>15 maggio 2019</b><br>
+						<p>Dipartimento di Matematica e Fisica,  Università di Roma Tre</p>
+						  <ul>
+							<li>
+								<b>Annalisa Errico</b> -- Presidenza del Consiglio dei Ministri:<br>
+								<i>Il Mestiere del Crittografo</i>.<br>
+								<a href='../../../../assets/attivita/seminariLocali/deCifrisScholaLatina/errico-locandina.pdf' style="color: #000080;">Locandina</a><br>
+							</li>
+					  </ul>
+					 </li>
+					 <br>
+					<li>
+						<b>24 giugno 2019</b>
+						<p>Dipartimento di Informatica, Università di Roma La Sapienza</p>
+						<ul>
+							<li>
+								<b>Daniele Friolo</b> -- Dipartimento di Informatica,	Università di Roma La Sapienza:<br>
+								<i> Affordable Security or Big Guy vs Small Guy. Does the depth of your pockets impact your protocols?</i>.<br>
+								<a href='../../../../assets/attivita/seminariLocali/deCifrisScholaLatina/friolo-locandina.pdf' style="color: #000080;">Locandina</a> -- 
+								<a href="../../../../assets/attivita/seminariLocali/deCifrisScholaLatina/friolo-slide.pdf">Slide</a><br>
+							</li>
+						</ul>
+					</li>
+				 </ul>
+			</div>
+			<hr>
+		</div>
+	</div>
+</ng-sidebar-container>

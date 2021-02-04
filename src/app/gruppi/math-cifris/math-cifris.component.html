@@ -1,0 +1,77 @@
+<ng-sidebar-container>
+	<ng-sidebar opened="true" position="left" id="right-sidebar" mode="push" [autoCollapseWidth]="799">
+		<ul class="noIndent" align="left">
+			<!-- Utilizziamo questo trick per evitare di rendere visibile l'autofocus al lettore. -->
+			<li style="display:none">
+				<button autofocus="autofocus"></button>
+			</li>
+			<li>
+				<button class="btn btn-outline-info" (click)="goTo('inizaitive')">
+					Iniziative
+				</button>
+			</li>
+			<li>
+				<button class="btn btn-outline-info" (click)="goTo('seminari')">
+					Seminari
+				</button>
+			</li>
+		</ul>
+	</ng-sidebar>
+	<div ng-sidebar-content class="container bottomExtra"> 
+		<br>
+		<div class="container mt-3">
+			<div class="row">
+				<div class="col-md-12">
+					<h3>MATH CIFRIS</h3>
+					<p>
+						Il nuovo gruppo tematico MathCifris dell'iniziativa nazionale De Componendis 
+						Cifris, raccoglie tutte le persone interessate agli aspetti matematici della crittografia. 
+					</p>
+					<hr>
+					<h4 id="iniziative">INIZIATIVE</h4>
+					<p>Il gruppo tematico MathCifris ha lo scopo di organizzare: </p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<ul>
+						<li>Un convegno nazionale (annuale) di crittografia e dei suoi aspetti matematici 
+							con collaborazioni esterne di esperti provenienti, non solo dal mondo accademico, 
+							ma anche da quello aziendale. </li>
+						<li> Iniziative con le scuole, quali seminari e laboratori che permettano l'avvicinamento 
+							dei giovani a queste tematiche e la loro comprensione. Per collaborare con noi ed aiutarci 
+							a migliorare la nostra proposta: facci sapere la tua opinione, le tue idee o se nel 
+							tuo istituto sono stati già proposti seminari/laboratori di questo tipo, scrivendo 
+							un'email a matematica@decifris.it. </li>
+						<li> Seminari online per illustrare risultati di ricerche ed approfondimenti di aspetti 
+							matematici della crittografia. </li>
+						<li> Progetti dedicati allo sviluppo e all'applicazione della matematica da svolgere in aziende.</li> 
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<p>MathCifris ha iniziato una collaborazione con il gruppo UMI - Crittografia e Codici. </p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<h4 id="seminari">SEMINARI 2020 ONLINE</h4>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<ul>
+						<li>Francesco Sica, Nazarbayev University, Kazakhstan <br>
+							Fattorizzazione con indizi. <br>
+							10 Dicembre - 
+							<a href="../../../assets/attivita/gruppi/mathCifris/Locandina-Sica.pdf">Locandina</a> -
+							<a href="../../../assets/attivita/gruppi/mathCifris/Slide_Sica.pdf">Slide</a> - 
+							<a href="https://youtu.be/S3ZpmcjRDKk">Link al video</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</ng-sidebar-container>

@@ -1,0 +1,201 @@
+<ng-sidebar-container>
+	<ng-sidebar opened="true" position="left" id="right-sidebar" mode="push" [autoCollapseWidth]="799">
+	<!-- Ai posteri: in caso voleste inserire nuovo contenuto nella sidebar, questo è il posto -->
+	<ul class="noIndent" align="left">
+		<!-- Utilizziamo questo trick per evitare di rendere visibile l'autofocus al lettore. -->
+		<li style="display:none">
+			<button autofocus="autofocus"></button>
+		</li>
+		<li>
+			<button class="btn btn-outline-info" (click)="goTo('futuri')">
+				Eventi Futuri
+			</button>
+		</li>
+		<li>
+			<button class="btn btn-outline-info" (click)="goTo('passati')">
+				Eventi Passati
+			</button>
+		</li>
+	</ul>
+	</ng-sidebar>
+	<div ng-sidebar-content class="container bottomExtra">
+		<br>
+		<div class="px-3 py-3">
+			<h3>De Cifris Augustae Taurinorum </h3>
+			<b>Comitato organizzatore</b>:
+			<ul>
+				<li> Danilo Bazzanella, Politecnico di Torino, Dipartimento di Scienze Matematiche "Giuseppe Luigi Lagrange";</li>
+				<li> Lea Terracini, Università di Torino, Dipartimento di Matematica "G. Peano".</li>
+				<li> Guglielmo Morgari, Telsy S.p.A.;</li>
+				<li> Fabio Fiori, Quadrans;</li>
+			</ul>
+			<hr>
+			<h4 id="futuri"><a (click)="mostraAttivita('futuri')">Seminari futuri</a></h4>
+			<div *ngIf="attivitaDaMostrare=='futuri'">
+				<p class="warning">Avviso: causa dell'emergenza Coronavirus (Covid-19) organizzeremo i prossimi eventi in webinar. </p>
+				<ul>
+					<li>
+						<b>5 Febbraio 2021 - 14:30</b>
+						<ul>
+							<li>
+								<b>Carlo Sanna</b> -- Politecnico di Torino <br>
+								<i>"Introduction to Multivariate Cryptography".</i>.<br>
+								<a href="../../../assets/attivita/seminariLocali/deCifrisAugustaeTaurinorum/locandina_Sanna.pdf">Locandina</a>
+								<br>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<hr>
+			<h4 id="passati"><a (click)="mostraAttivita('passati')">Seminari passati</a></h4>
+			<div *ngIf="attivitaDaMostrare=='passati'">
+				<ul>
+					<li><b>17 luglio 2020:</b>
+						<ul>
+							<li>
+								<b>Giordano Santilli</b> -- Università di Trento:<br>
+								<i>An investigation on Integer Factorization applied to Public Key Cryptography</i>.<br>
+								<a href='../../../../assets/attivita/seminariLocali/deCifrisAugustaeTaurinorum/locandina_Gsantilli.pdf'>
+								<font color="#000080">Locandina</font></a> -- 
+								<a href="../../../../assets/attivita/seminariLocali/deCifrisAugustaeTaurinorum/presentazione_Santilli.pdf"> Slide</a> -- 
+								<a href="https://youtu.be/3U_DtScwDHU">Video</a>.<br>
+							</li>
+						 </ul>		
+					</li>
+					<li><b>21 maggio 2020:</b>
+						<ul>
+							<li>
+								<b>Michela Ceria</b> -- Università di Milano:<br>
+								<i>Why you should not even think to use Ore algebras in Cryptography</i>.<br>
+								<a href='./seminari_2020/locandine/taurinorum/05/Ceria2020.pdf'>
+								<font color="#000080">Locandina</font></a> -- 
+								<a href="./seminari_2020/slide/taurinorum/05/slideCeria.pdf"> Slide</a> -- 
+								<a href= "https://youtu.be/aZZsLD68Yac">Video</a>.<br>
+							</li>
+						 </ul>
+					</li>
+					<li><b>15 maggio 2020:</b>
+						<ul>
+							<li>
+							  <b>Andrea Gangemi</b> -- Politecnico di Torino:<br>
+								<i>The links between Machine Learning and Blockchain</i>.<br>
+							  <a href='../../../../assets/attivita/seminariLocali/deCifrisAugustaeTaurinorum/Gangemi2020.pdf'>
+								<font color="#000080">Locandina</font></a> -- 
+								<a href="../../../../assets/attivita/seminariLocali/deCifrisAugustaeTaurinorum/slideGangemi.pdf">Slide</a> -- 
+								<a href= "https://youtu.be/KDvD5oCz0RY">Video</a>.<br>
+							</li>
+						 </ul>
+					</li>
+					<li><b>24 aprile 2020:</b>
+						<ul>
+							<li>
+							  <b>Fadi Barbàra</b> -- Università di Torino:<br>
+								<i>An introduction to the Blockchain Privacy Problem</i>.<br>
+							  <a href='../../../../assets/attivita/seminariLocali/deCifrisAugustaeTaurinorum/Barbara2020.pdf'>
+								<font color="#000080">Locandina</font></a> -- 
+								<a href="../../../../assets/attivita/seminariLocali/deCifrisAugustaeTaurinorum/barbara-slide.pdf">Slide
+								</a> -- <a href="https://youtu.be/nPQJ7Cix77k">Video</a>.<br>
+							</li>
+						 </ul>
+					</li>
+					<li><b>8 aprile 2020:</b>
+						<ul>
+							<li>
+							  <b>Francesco Saettone</b> -- Ben-Gurion University of the Negev:<br>
+								<i>Towards a computational approach for Chabauty method</i>.<br>
+							  <a href='../../../../assets/attivita/seminariLocali/deCifrisAugustaeTaurinorum/SAETTONE_locandina.pdf'>
+								<font color="#000080">Locandina</font></a> -- 
+								<a href="../../../../assets/attivita/seminariLocali/deCifrisAugustaeTaurinorum/SAETTONE-slide.pdf">Slide</a> -- 
+								<a href= "https://youtu.be/WmU63b7gXQw">Video</a>.<br>
+							</li>
+						 </ul>
+					</li>
+					<li><b>21 febbario 2020:</b>
+						<ul>
+							<li>
+							  <b>Maurizio Murgia</b> -- Università di Trento:<br>
+								<i>Libra blockchain and consensus: an overview</i>.<br>
+							  <a href='../../../../assets/attivita/seminariLocali/deCifrisAugustaeTaurinorum/MURGIA.locandina.pdf'>
+								<font color="#000080">Locandina</font></a>. 
+								<!-- -- <a href="./seminari_2020/slide/taurinorum/04/SAETTONE-slide.pdf"> Slide</a>.<br> -->
+							</li>
+						 </ul>
+					</li>
+					<li><b>6 dicembre 2019:</b>
+						<ul>
+							<li>
+							  <b>Michele Elia</b> -- Politecnico di Torino:<br>
+								<i>Continued Fractions and Factoring</i>.<br>
+							  <a href='../../../../assets/attivita/seminariLocali/deCifrisAugustaeTaurinorum/elia-locandinaTO.pdf'>
+								<font color="#000080">Locandina</font></a> -- 
+								<a href="../../../../assets/attivita/seminariLocali/deCifrisAugustaeTaurinorum/ELIA-slide">Slide</a>.<br>
+							</li>
+						 </ul>
+					</li>
+					<li><b>22 novembre 2019:</b>
+						<ul>
+							<li>
+							  <b>Stefano Barbero</b> -- Politecnico di Torino:<br>
+								<i>An overview on cryptanalysis of ARX ciphers</i>.<br>
+							  <a href='../../../../assets/attivita/seminariLocali/deCifrisAugustaeTaurinorum/barbero-locandina.pdf'>
+								<font color="#000080">Locandina</font></a> -- 
+								<a href="../../../../assets/attivita/seminariLocali/deCifrisAugustaeTaurinorum/barbero-slide">Slide</a>.<br>
+							</li>
+						 </ul>
+					</li>	
+					<li><b>25 settembre 2019:</b>
+						<ul>
+							<li>
+							  <b>Andrea Visconti</b> -- Università di Milano:<br>
+								<i>Key derivation function: an essential (and usually transparent) component of real-world applications</i>.<br>
+							  <a href='../../../../assets/attivita/seminariLocali/deCifrisAugustaeTaurinorum/visconti-locandina.pdf'>
+								<font color="#000080">Locandina</font></a> -- 
+								<a href="../../../../assets/attivita/seminariLocali/deCifrisAugustaeTaurinorum/visconti-slide.pdf">Slide</a>.<br>
+							</li>
+						 </ul>
+					</li>	
+					<li><b>15 luglio 2019:</b>
+						<ul>
+							<li>
+							  <b>Giuseppe D'Alconzo</b> -- Telsy S.p.A.:<br>
+								<i>An introduction to Secure Multi-Party Computation</i>.<br>
+							  <a href='../../../../assets/attivita/seminariLocali/deCifrisAugustaeTaurinorum/dalconzo-locandina.pdf'>
+								<font color="#000080">Locandina</font></a> -- 
+								<a href="../../../../assets/attivita/seminariLocali/deCifrisAugustaeTaurinorum/dalconzo-slide.pdf">Slide</a>.<br>
+							</li>
+						 </ul>
+					</li>	
+					<li><b>16 maggio 2019:</b>
+						<ul>
+							<li>
+							  <b>Fabio Fiori</b> -- Fondazione Quadrans:<br>
+								<i>Distributed consensus algorithm, a novel approach</i>.<br>
+							  <a href='../../../../assets/attivita/seminariLocali/deCifrisAugustaeTaurinorum/fiori-locandina.pdf'>
+								<font color="#000080">Locandina</font></a> -- 
+								<a href="../../../../assets/attivita/seminariLocali/deCifrisAugustaeTaurinorum/fiori-slide.pdf">Slide</a>.<br>
+							</li>
+						 </ul>
+					</li>	
+					<li><b>18 aprile 2019:</b>
+						<ul>
+							<li>
+							  <b>Simone Dutto</b> -- Politecnico di Torino:<br>
+								<i>An overview about elliptic curve cryptosystems and pairings</i>.<br>
+							  <a href='../../../../assets/attivita/seminariLocali/deCifrisAugustaeTaurinorum/dutto-locandina.pdf'>
+								<font color="#000080">Locandina</font></a> -- 
+								<a href="../../../../assets/attivita/seminariLocali/deCifrisAugustaeTaurinorum/dutto-slide.pdf">Slide</a>.<br>
+							</li>
+						 </ul>
+					</li>	
+				</ul>
+			</div>
+			<hr>
+			<!-- <p>
+				Il coordinatore dei seminari locali: Roberto La Scala 
+				<a href="mailto:roberto.lascala@uniba.it">roberto.lascala@uniba.it</a>.
+			</p>
+			<hr> -->
+		</div>
+	</div>
+</ng-sidebar-container>

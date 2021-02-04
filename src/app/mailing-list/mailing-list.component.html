@@ -1,0 +1,115 @@
+<div class="mt-3">
+	<div class="row">
+		<div class="col-md-12">
+			Se condividi i nostri obiettivi, registrati alla nostra mailing-list 
+			per rimanere aggiornato con il seguente form. Non vi è nulla da pagare, 
+			non vi è alcun impegno formale. La mailing-list è puramente informativa 
+			e la tua email sarà usata solo ed esclusivamente da noi per inviarti 
+			news sulla nostra iniziativa. Puoi cancellarti in qualunque momento. 
+		</div>
+	</div>
+</div>
+<br>
+<!-- <p>NOTA: Il seguente form è ancora in aggiornamento. Nel frattempo raccomandiamo l'iscizione 
+	tramite il googleForm presente a questo <a href="https://docs.google.com/forms/d/e/1FAIpQLSd
+	XRs-olyfl9OGrg54QJ1VmF061Xb_yvahto34mPjCTz9jvig/viewform?embedded=true">link</a>.</p> -->
+<div class="my-3" *ngIf="!submitted">
+	<div class="row">
+		<div class="col-md-auto" style="margin: auto;">
+			<h2>Form di registrazione</h2>
+			<form [formGroup]="registrationForm" style="display: block;" (ngSubmit)="onSubmit()">
+				<div class="form-group">
+					<label>Indirizzo Email</label>
+					<input [class.is-invalid]="registrationForm.get('indirizzoEmail').invalid && registrationForm.get('indirizzoEmail').touched"
+							formControlName="indirizzoEmail" type="text" class="form-control">
+					<!-- <small [class.d-none]="!(registrationForm.get('indirizzoEmail').invalid && registrationForm.get('indirizzoEmail').touched)"
+							class="text-danger">Parametro obbligatorio</small> -->
+					<div *ngIf="registrationForm.get('indirizzoEmail').invalid && registrationForm.get('indirizzoEmail').touched">
+							<small *ngIf="registrationForm.get('indirizzoEmail').errors?.required" class="text-danger">Parametro obbligatorio</small>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label>Titolo</label>
+					<select class="form-select" formControlName="titolo" class="form-control">
+						<option selected></option>
+						<option *ngFor="let titolo of titoli">{{titolo}}</option>
+					 </select>
+				</div>
+
+				<div class="form-group">
+					<label>Nome</label>
+					<input [class.is-invalid]="registrationForm.get('nome').invalid && registrationForm.get('nome').touched"
+						formControlName="nome" type="text" class="form-control">
+					<div *ngIf="registrationForm.get('nome').invalid && registrationForm.get('nome').touched">
+						<small *ngIf="registrationForm.get('nome').errors?.required" class="text-danger">Parametro obbligatorio</small>
+					</div>
+			</div>
+
+			<div class="form-group">
+					<label>Cognome</label>
+					<input [class.is-invalid]="registrationForm.get('cognome').invalid && registrationForm.get('cognome').touched"
+						formControlName="cognome" type="text" class="form-control">
+					<div *ngIf="registrationForm.get('cognome').invalid && registrationForm.get('cognome').touched">
+						<small *ngIf="registrationForm.get('cognome').errors?.required" class="text-danger">Parametro obbligatorio</small>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label>Provincia</label>
+					<input formControlName="provincia" type="text" class="form-control">
+			</div>
+
+			<div class="form-group">
+					<label>Ente</label>
+					<input [class.is-invalid]="registrationForm.get('ente').invalid && registrationForm.get('ente').touched"
+						formControlName="ente" type="text" class="form-control">
+					<div *ngIf="registrationForm.get('ente').invalid && registrationForm.get('ente').touched">
+						<small *ngIf="registrationForm.get('ente').errors?.required" class="text-danger">Parametro obbligatorio</small>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label>Telefono</label>
+					<input formControlName="telefono" type="text" class="form-control">
+			</div>
+
+			<div class="form-group">
+					<label>Città</label>
+					<input [class.is-invalid]="registrationForm.get('citta').invalid && registrationForm.get('citta').touched"
+						formControlName="citta" type="text" class="form-control">
+					<div *ngIf="registrationForm.get('citta').invalid && registrationForm.get('citta').touched">
+						<small *ngIf="registrationForm.get('citta').errors?.required" class="text-danger">Parametro obbligatorio</small>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label>Occupazione</label>
+					<select class="form-select" formControlName="occupazione" class="form-control" 
+						[class.is-invalid]="registrationForm.get('occupazione').invalid && registrationForm.get('occupazione').touched">
+						<option selected></option>
+						<option *ngFor="let occupazione of occupazioni">{{occupazione}}</option>
+						</select>
+					<div *ngIf="registrationForm.get('occupazione').invalid && registrationForm.get('occupazione').touched">
+						<small *ngIf="registrationForm.get('occupazione').errors?.required" class="text-danger">Parametro obbligatorio</small>
+					</div>
+				</div>
+
+				<button [disabled]="!registrationForm.valid" class="btn btn-primary float-right" type="submit">Registrati</button>
+			</form>
+		</div>
+	</div>
+	<br>
+</div>
+
+<div class="row notify" *ngIf="submitted">
+	<div class="col-md-12">
+		<h4>De Componendis Cifris</h4>
+		<p>
+			Con la presente si conferma la Sua iscrizione alla nostra mailing list. 
+			Sarà così sempre aggiornato su ogni evento che organizzeremo. Per aggiornare 
+			i dati o ritirare la propria adesione, prego scrivere direttamente al seguente 
+			indirizzo e-mail: segreteria@decifris.it. <br> Cordiali Saluti.
+		</p>
+	</div>
+</div>

@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "http-requests-e5dfd",
+    "dist/DeCifris": "decifris-cfa79",
+    "staging": "decifris-cfa79",
+    "progettoDeCifris": "decifris-cfa79"
+  }
+}

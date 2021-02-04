@@ -1,0 +1,53 @@
+
+<ng-sidebar-container>
+	<ng-sidebar opened="true" position="left" id="right-sidebar" mode="push" [autoCollapseWidth]="799">
+	<!-- Ai posteri: in caso voleste inserire nuovo contenuto nella sidebar, questo è il posto -->
+	<ul class="noIndent" align="left">
+		<!-- Utilizziamo questo trick per evitare di rendere visibile l'autofocus al lettore. -->
+		<li style="display:none">
+			<button autofocus="autofocus"></button>
+		</li>
+		<li>
+			<button class="btn btn-outline-info" (click)="goTo('futuri')">
+				Eventi Futuri
+			</button>
+		</li>
+		<li>
+			<button class="btn btn-outline-info" (click)="goTo('passati')">
+				Eventi Passati
+			</button>
+		</li>
+	</ul>
+	</ng-sidebar>
+	<div ng-sidebar-content class="container bottomExtra">
+		<div class="mt-3">
+			<br>
+			<div class="row">
+				<div class="col-md-12">
+					<h3>EVENTI PUBBLICI</h3>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<app-eventi-pubblici></app-eventi-pubblici>
+				</div>
+			</div>
+			<hr>
+			<h4 id="futuri"><a (click)="mostraEventi('futuri')">EVENTI FUTURI</a></h4>
+			<div *ngIf="eventiDaMostrare=='futuri'">
+				<app-eventi-futuri></app-eventi-futuri>
+			</div>
+			<hr>
+			<h4 id="passati"><a (click)="mostraEventi('passati')">EVENTI PASSATI</a></h4>
+			<div *ngIf="eventiDaMostrare=='passati'">
+				<app-eventi-passati></app-eventi-passati>
+			</div>
+			<hr>
+		</div>
+	</div>
+</ng-sidebar-container>
+
+
+
+
+

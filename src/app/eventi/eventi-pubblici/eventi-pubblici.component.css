@@ -1,0 +1,18 @@
+button{
+	background:none;
+	border:none;
+	outline:none;
+	color:#007bff;
+}
+
+h4{
+	color:rgb(23, 162, 184);
+}
+
+a{
+	cursor: pointer;
+}
+
+.toggleText{
+	color: #1976D2;
+}

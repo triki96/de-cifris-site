@@ -1,0 +1,43 @@
+h3 ,h4{
+	color:rgb(23, 162, 184);
+}
+
+button{
+	background:none;
+	border:none;
+	outline:none;
+	color:rgb(48, 117, 128);
+}
+
+ng-sidebar-container{
+	position: fixed;
+	right: 0;
+	top: 55px;
+	height: 100%;
+}
+
+::ng-deep .ng-sidebar{
+	background-color: aliceblue;
+	width: 225px;
+	padding: 2em 1em;
+}​
+
+@media screen and (max-width: 799px) {
+	#right-sidebar {
+		 display: none !important;
+	}
+}
+
+.bottomExtra{
+	margin-bottom: 3em;
+	padding-bottom: 3em;
+}
+
+.noIndent {
+	list-style: none;
+	padding-left: 0;
+}
+
+.noIndent ul li {
+	margin: 10px 0;
+}

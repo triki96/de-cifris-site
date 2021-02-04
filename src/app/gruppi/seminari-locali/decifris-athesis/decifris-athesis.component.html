@@ -1,0 +1,245 @@
+<ng-sidebar-container>
+	<ng-sidebar opened="true" position="left" id="right-sidebar" mode="push" [autoCollapseWidth]="799">
+	<!-- Ai posteri: in caso voleste inserire nuovo contenuto nella sidebar, questo è il posto -->
+	<ul class="noIndent" align="left">
+		<!-- Utilizziamo questo trick per evitare di rendere visibile l'autofocus al lettore. -->
+		<li style="display:none">
+			<button autofocus="autofocus"></button>
+		</li>
+		<li>
+			<button class="btn btn-outline-info" (click)="goTo('futuri')">
+				Eventi Futuri
+			</button>
+		</li>
+		<li>
+			<button class="btn btn-outline-info" (click)="goTo('passati')">
+				Eventi Passati
+			</button>
+		</li>
+	</ul>
+	</ng-sidebar>
+	<div ng-sidebar-content class="container bottomExtra"> 
+		<br>
+		<div class="px-3 py-3">
+			<h3>De Cifris Athesis</h3>
+			<p>Il ciclo di seminari <i>De Cifris Athesis</i> presenta 
+				risultati di ricerca nell'ambito della <i>crittografia 
+				e applicazioni</i>.<br>	I seminari saranno tenuti da 
+				<em>esperti nazionali e internazionali</em>, in lingua 
+				inglese e italiana, e saranno aperti a tutti.
+			</p>
+			<h5>Comitato organizzatore</h5>
+			<ul>
+				<li> Silvio Ranise, Fondazione Bruno Kessler;</li>
+				<li> Massimiliano Sala, Università di Trento;</li>
+				<li> Roberto Zunino, Università di Trento.</li>
+			</ul>
+			<hr>
+			<h4 id="futuri"><a (click)="mostraAttivita('futuri')">Seminari futuri</a></h4>
+			<div *ngIf="attivitaDaMostrare=='futuri'"> 
+				<p>POVO 1, Università di Trento, <b>Trento</b></p>
+				<p class="warning">Avviso: causa dell'emergenza Coronavirus (Covid-19) organizzeremo i prossimi eventi in webinar.</p>
+			</div>
+			<hr>
+			<h4 id="passati"><a (click)="mostraAttivita('passati')">Seminari passati</a></h4>
+			<div *ngIf="attivitaDaMostrare=='passati'">
+				<ul>
+					<li><b>25 Gennaio 2021: </b>
+						<ul>
+							<li>
+								<b>Daniele Venturi</b> --
+								<a href="https://www.uniroma1.it/">Università di Roma - La Sapienza</a>
+								<br>
+								<i>"Immunizing Cryptographic Primitives against Complete Subversion".</i>
+								<br>
+								<a href="../../../../assets/attivita/seminariLocali/deCifrisAthesis/locandina_Venturi.pdf"> Slide</a> --
+								<a href="https://youtu.be/uXD3v1F1RDw">Video</a>
+							</li>
+						</ul>
+					</li>
+					<li><b>3 Dicembre 2020: </b>
+						<ul>
+							<li>
+								<b>Luca Lusini</b> --
+								<a href="https://www.agid.gov.it/">AGID</a>
+								<br>
+								<i>Studiare la crittografia dei ransomware</i>
+								<br>
+								<a href="../../../../../../assets/attivita/seminariLocali/deCifrisAthesis/3.12.2020-Lusini.pdf"> Locandina</a> --
+								<a href="../../../../../../assets/attivita/seminariLocali/deCifrisAthesis/slide_Lusini.pdf"> Slide</a> --
+								<a href="https://youtu.be/cVV0O-VUwus">Video</a>
+							</li>
+						</ul>
+					</li>
+					<li><b>18 novembre 2020: </b>
+						<ul>
+							<li>
+								<b>Darren Tapp</b> -- 
+								<a href="https://www.dash.org/it/">DASH</a>
+								<br>
+								<i>Consensus among computer networks.</i>
+								<br>
+								<a href="../../../../../../assets/attivita/seminariLocali/deCifrisAthesis/18.11.2020_TAPP.pdf"> Locandina </a> -- 
+								<a href="../../../../../../assets/attivita/seminariLocali/deCifrisAthesis/Darren_Tapp.pdf">Slide</a> -- 
+								<a href="https://www.youtube.com/watch?v=rzHJ0wsqXcg">Video</a>
+						</li> 
+					</ul>
+					</li>
+					<li><b>18 giugno 2020: </b>
+						<ul>
+							<li>
+								<b>Federico Mazzone</b> -- Università di Trento:
+								<br><i>Paillier homomorphic encryption and its application to build a share conversion protocol</i>.<br>
+								<a href='../../../../../../assets/attivita/seminariLocali/deCifrisAthesis/locandina_MAZZONE.pdf'>Locandina</a> -- 
+								<a href="../../../../../../assets/attivita/seminariLocali/deCifrisAthesis/slide_Mazzone.pdf">Slide</a> -- 
+								<a href="https://youtu.be/bOOesu7O1f8">Video</a>.
+							</li>
+						</ul>
+					</li>
+					<li><b>29 maggio 2020: </b>
+						<ul>
+							<li>
+								<b>Chiara Spadafora</b> -- Università di Trento:<br>
+								<i> A new blockchain-based secure e-voting protocol</i>.<br>
+								<a href='../../../../../../assets/attivita/seminariLocali/deCifrisAthesis/SPADAFORA-locandina.pdf'>Locandina</a> -- 
+								<a href="../../../../../../assets/attivita/seminariLocali/deCifrisAthesis/slides_spadafora.pdf">Slide</a> -- 
+								<a href="https://youtu.be/Lpn_u1ziLmQ">Video</a>.
+							</li>
+						</ul>
+					</li>
+					<li><b>23 gennaio 2020: </b>
+						<ul>
+							<li>
+								<b>Mariano Ceccato </b> -- Università di Verona:<br>
+								<i>A Federated Society of Bots for Smart Contract Testing</i>.<br>
+								<a href='../../../../../../assets/attivita/seminariLocali/deCifrisAthesis/CECCATO_23.01.2020'>Locandina</a> -- 
+								<a href="../../../../../../assets/attivita/seminariLocali/deCifrisAthesis/ceccato-slide.pdf">Slide</a>.
+							</li>   
+							<li>
+								<b>Alessandro Tomasi</b> -- Fondazione Bruno Kessler:<br>
+								<i> Digital identity - modern tools and perspectives</i>.<br>
+								<a href='../../../../../../assets/attivita/seminariLocali/deCifrisAthesis/Tomasi_23.01.2020.pdf'>Locandina</a> -- 
+								<a href="../../../../../../assets/attivita/seminariLocali/deCifrisAthesis/TOMASI-slide.pdf">Slide</a>.
+							</li>
+					</ul></li>
+					<li><b>16 dicembre 2019: </b>
+						<ul>
+							<li>
+								<b> Luca Mariot</b> Università di Milano Bicocca:<br>
+								<i> Search for optimal Boolean functions</i>.<br>
+								<a href="../../../../../../assets/attivita/seminariLocali/deCifrisAthesis/mariot-locandina.pdf">Locandina</a> -- 
+								<a href="../../../../../../assets/attivita/seminariLocali/deCifrisAthesis/mariot-slide.pdf">Slide</a>.
+							</li>
+					</ul>
+					</li>
+					<li><b>27 novembre 2019: </b>
+						<ul>
+							<li>
+								<b>Giovanni Schmid</b> -- CNR - ICAR:<br>
+								<i>Hyperledger Fabric: crittografia per blockchain permissioned</i>.<br>
+								<a href="../../../../../../assets/attivita/seminariLocali/deCifrisAthesis/schmid-locandina.pdf">Locandina</a> -- 
+								<a href="../../../../../../assets/attivita/seminariLocali/deCifrisAthesis/schmid-slide.pdf">Slide</a>.
+							</li>
+							<li>
+								<b> Matteo Bonini</b> -- POLIMI:<br>
+								<i>Analisi sulla De-anonimizzazione di blockchain</i>.<br>
+								<a href="../../../../../../assets/attivita/seminariLocali/deCifrisAthesis/bonini-locandina.pdf">Locandina</a> -- 
+								<a href="../../../../../../assets/attivita/seminariLocali/deCifrisAthesis/bonini-slide.pdf">Slide</a>.
+							</li>
+						</ul></li>
+					<li><b>30 ottobre 2019: </b>
+						<ul>
+							<li>
+								<b> Michele Elia</b> -- Politecnico di Torino:<br>
+								<i>Continued Fractions and Factoring</i>.<br>
+								<a href="../../../../../../assets/attivita/seminariLocali/deCifrisAthesis/michele2elia-locandina.pdf">Locandina</a> -- 
+								<a href="../../../../../../assets/attivita/seminariLocali/deCifrisAthesis/michele2elia-slide.pdf">Slide</a>.
+							</li>
+							<li>
+								<b> Maurizio Murgia</b> -- Università di Trento:<br>
+								<i>An introduction to Libra and LibraBFT consensus algorithm</i>.<br>
+								<a href="../../../../../../assets/attivita/seminariLocali/deCifrisAthesis/murgia-locandina.pdf">Locandina</a> -- 
+								<a href="../../../../../../assets/attivita/seminariLocali/deCifrisAthesis/murgia-slide.pdf"> Slide</a>.
+							</li>
+							<li>
+								<b>Giovanni Antino</b> -- AiliA SA - Takamaka.io:<br>
+								<i>Non-interactive time-based proof of stake</i>.<br>
+								<a href="../../../../../../assets/attivita/seminariLocali/deCifrisAthesis/antino-locandina.pdf">Locandina</a> -- 
+								<a href="../../../../../../assets/attivita/seminariLocali/deCifrisAthesis/antino-slide.pdf">Slide</a>.
+							</li>
+						</ul> 
+					</li>
+					<li><b>10 settembre 2019:</b>
+						<ul>
+							<li>
+							<p><b>Ivan Visconti</b> -- Università di Salerno:<br>
+							<i>The Rush Dilemma: Smart Contracts on Forking Blockchains</i>.<br>
+							<a href="../../../../../../assets/attivita/seminariLocali/deCifrisAthesis/ivanvisconti-locandina.pdf">Locandina</a> -- 
+							<a href="../../../../../../assets/attivita/seminariLocali/deCifrisAthesis/ivanvisconti-slide.pdf">Slide</a>.</p>
+							</li>
+							<li>
+							<p><b>Chiara Bodei</b> -- Università di Pisa:<br>
+							<i>Control Flow Analysis for process algebras with applications to security</i>.<br>
+							<a href="../../../../../../assets/attivita/seminariLocali/deCifrisAthesis/bodei-locandina.pdf">Locandina</a> -- 
+							<a href="../../../../../../assets/attivita/seminariLocali/deCifrisAthesis/bodei-slide.pdf">Slide</a>.</p>
+							</li>
+							<li>
+							<b>Carlo Blundo</b> -- Università di Salerno:<br>
+							<i>Privacy-preserving Information Sharing</i>.<br>
+							<a href="../../../../../../assets/attivita/seminariLocali/deCifrisAthesis/blundo-locandina.pdf">Locandina</a> -- 
+							<a href="../../../../../../assets/attivita/seminariLocali/deCifrisAthesis/blundo-slide.pdf">Slide</a>.
+							</li>
+						</ul>
+					</li>
+					<li><b>11 giugno 2019: </b>
+						<ul>
+							<li>
+								<b>Calderini Marco</b> -- University of Bergen:<br>
+								<i>On equivalence relations of Boolean functions</i>.<br>
+								<a href="../../../../../../assets/attivita/seminariLocali/deCifrisAthesis/calderini-locandina.pdf">Locandina</a> -- 
+								<a href="../../../../../../assets/attivita/seminariLocali/deCifrisAthesis/calderini-slide.pdf">Slide</a>.
+							</li>
+						</ul>
+					</li>
+					<li><b>15 aprile 2019: </b>
+						<ul>
+							<li>
+								<b>Ottavio G. Rizzo</b> -- Università di Milano: <br>
+								<i>Moltiplicare efficientemente polinomi in caratteristica 2</i>.<br>
+								<a href="../../../../../../assets/attivita/seminariLocali/deCifrisAthesis/rizzo-locandina.pdf">Locandina</a> -- 
+								<a href="../../../../../../assets/attivita/seminariLocali/deCifrisAthesis/rizzo-slide.pdf">Slide</a>.
+						</li>
+						</ul>
+					</li>
+					<li><b>7 marzo 2019: </b>
+						<ul> 
+							<li> 
+								<b>Claudio Orlandi</b> -- Aarhus University: <br>
+								<i>Quisquis: A New Design for Anonymous Cryptocurrencies</i>.<br>
+								<a href="../../../../../../assets/attivita/seminariLocali/deCifrisAthesis/orlandi-locandina.pdf">Locandina</a> -- 
+								<a href="../../../../../../assets/attivita/seminariLocali/deCifrisAthesis/orlandi-slide.gz">Slide</a>.
+							</li> 
+							<li>
+								<b>Michele Elia</b> -- Politecnico di Torino: <br>
+								<i>On a Problem of Perron</i>.<br>
+								<a href="../../../../../../assets/attivita/seminariLocali/deCifrisAthesis/elia-locandina.pdf">Locandina</a> -- 
+								<a href="../../../../../../assets/attivita/seminariLocali/deCifrisAthesis/elia-slide.pdf">Slide</a>.
+							</li>
+					</ul>
+					</li>
+					<li><b>11 febbraio 2019:</b>
+						<ul>
+							<li>
+							<b>Federico Pintore</b> -- University of Oxford:<br>
+							<i>Cryptographic primitives from elliptic curve isogenies</i>.<br>
+							<a href="../../../../../../assets/attivita/seminariLocali/deCifrisAthesis/DeCifrisAthesis_Pintore2019.pdf">Locandina</a> -- 
+							<a href="../../../../../../assets/attivita/seminariLocali/deCifrisAthesis/pintore-slide.pdf">Slide</a>.
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<hr>
+		</div>
+	</div>
+</ng-sidebar-container>

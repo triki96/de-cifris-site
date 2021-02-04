@@ -1,0 +1,24 @@
+@media all and (min-width: 992px) {
+	.navbar .nav-item .dropdown-menu{ display: none; }
+	.navbar .nav-item:hover .dropdown-menu{ display: block; }
+	.navbar .nav-item .dropdown-menu{ margin-top:0; }
+}
+
+
+div.zoomed { 
+	zoom: 1.1; 
+	-moz-transform: scale(1.1);
+	-moz-transform-origin: 0 0;
+}
+
+navbar{
+	z-index:1;
+}
+
+.noFocus:focus{
+	outline: none !important;
+}
+
+.noFocus:hover{
+	cursor: pointer;
+}

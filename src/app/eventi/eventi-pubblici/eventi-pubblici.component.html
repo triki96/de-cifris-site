@@ -1,0 +1,29 @@
+<div class="mt-3">
+	<p> Le attività della De Cifris comprendono l'organizzazione di eventi 
+		pubblici qualificanti, tra cui un convegno annuale di crittografia a 
+		livello nazionale. I nostri eventi pubblici racchiudono sia 
+		<a routerLink="/sessioni">sessioni territoriali</a>
+		<!-- <a class="toggleText" (click)="mostraSessioni()">sessioni territoriali</a> -->
+		, sia convegni di diversi gruppi tematici (
+			<a routerLink="/cifrisChain" (click)="scegliAttivita('cifrisChain')">CifrisChain</a>, 
+			<a routerLink="/PQCifris" (click)="scegliAttivita('PQCifris')">PQCifris</a>, 
+			<a routerLink="/cifrisCloud" (click)="scegliAttivita('cifrisCloud')">Cifris Cloud</a>, 
+			<a routerLink="/mathCifris" (click)="scegliAttivita('mathCifris')">Math Cifris</a>).</p>
+	
+	<p> Tra i nostri eventi territoriali segnaliamo: </p>
+	<p>De Cifris incontra Perugia --
+	<a  class="toggleText" (click)="mostraCitta('perugia')">16 ottobre 2019</a>;</p>
+	<div *ngIf="cittaDaMostrare=='perugia'"><app-sessione-perugia></app-sessione-perugia></div>
+	 
+	<p>De Cifris incontra Roma --
+	<a class="toggleText" (click)="mostraCitta('roma')">4 ottobre 2018</a>;</p>
+	<div *ngIf="cittaDaMostrare=='roma'"><app-sessione-roma></app-sessione-roma></div>
+	
+	<p>De Cifris incontra Milano --
+	<a class="toggleText" (click)="mostraCitta('milano')">11 settembre 2018</a>;</p>
+	<div *ngIf="cittaDaMostrare=='milano'"><app-sessione-milano></app-sessione-milano></div>
+	
+	<p>De Cifris incontra Salerno --
+	<a class="toggleText" (click)="mostraCitta('salerno')">9 maggio 2018</a>.</p>
+	<div *ngIf="cittaDaMostrare=='salerno'"><app-sessione-salerno></app-sessione-salerno></div>
+</div>

@@ -1,0 +1,124 @@
+<div class="row">
+	<div class="col-md-12">
+		<p>Di seguito uno storico completo degli eventi passati</p>
+		<h5>EVENTI 2020</h5>
+		<ul>
+			<li><a href="http://club.di.unimi.it/cryptowars2020.html">CRYPTOWARS 2020</a></li>
+			<li>
+				<a href="../../../assets/eventi/2020/RomaAntica/DC-Historiae-Moraglio.pdf">CODICI 
+					SEGRETI NELLA ROMA ANTICA (6 novembre 2020)</a> - <a href="../../../assets/eventi/
+					2020/RomaAntica/MORAGLIO-slide.pdf">slide</a></li>
+			<li> 
+				Workshop: CRYPTANALYSIS: a key tool in securing and breaking ciphers -- 
+				<a class="toggleText" (click)="mostraEvento('workshopCryptanalysis')">4 febbraio</a>;</li>
+			<div *ngIf="eventoDaMostrare=='workshopCryptanalysis'">
+				<app-workshop-cryptanalysis></app-workshop-cryptanalysis>
+			</div>
+			<li>
+				12TH CONFERENCE ON SECURITY AND CRYPTOGRAPHY FOR NETWORKS -- 
+				<a href="https://scn.unisa.it/">14-16 settembre</a></li>
+		</ul>
+	</div>
+</div>
+<hr>
+<div class="row">
+	<div class="col-md-12">
+		<h5>EVENTI 2019</h5>
+		<ul>
+			<li> CryptoWars -- <a href="http://club.di.unimi.it/cryptowars2019.html">settimana 21-25 ottobre</a></li>
+			<li>Evento De Cifris Nord Italia -- <a class="toggleText" (click)="mostraEvento('torinoOttobre')">Torino 14 ottobre</a></li>
+			<div *ngIf="eventoDaMostrare=='torinoOttobre'">
+				<app-sessione-torino></app-sessione-torino>
+			</div>
+			<li>
+				Evento De Cifris Centro-Sud Italia -- 
+				<a class="toggleText"(click)="mostraEvento('perugia')">Perugia 16 ottobre</a></li>
+			<div *ngIf="eventoDaMostrare=='perugia'">
+				<app-sessione-perugia></app-sessione-perugia>
+			</div>
+			<li>
+				Prima HACKATHON De Cifris di Smart Contract -- 
+				<a class="toggleText" (click)="mostraEvento('hackatonSmartContract')">26 settembre</a>
+			</li>
+			<div *ngIf="eventoDaMostrare=='hackatonSmartContract'">
+				<app-hackaton-smart-contract></app-hackaton-smart-contract>
+			</div>
+			<li>
+				Creazione dei cicli di <a href="/seminariLocali">seminari locali</a></li>
+			<li>Le <a href="/opportunita">borse di studio</a> dell'Advisory Board </li>
+			<li><a href="/attivita">Le 100 tesi</a></li>
+			<li>Evento di crittografia militare in collaborazione con AFCEA -- Roma 8 maggio </li>
+			<li>
+				Primo evento del neocostituito team di PostQuantum: PQCifris2019 -- 
+				<a class="toggleText" (click)="mostraEvento('romaPQCifris')">Roma 9 maggio</a>
+			</li>
+			<div *ngIf="eventoDaMostrare=='romaPQCifris'">
+				<app-sessione-roma-pqcifris></app-sessione-roma-pqcifris>
+			</div>
+			<li>Seconda edizione dell'evento del team di Blockchain: CifrisChain2019 -- 
+				<a class="toggleText" (click)="mostraEvento('romaCifrisChain')">Roma 9 maggio</a>
+			</li>
+			<div *ngIf="eventoDaMostrare=='romaCifrisChain'">
+				<app-sessione-roma-cifrischain></app-sessione-roma-cifrischain>
+			</div>
+		</ul>
+	</div>
+</div>
+<hr>
+<div class="row">
+	<div class="col-md-12">
+		<h5>EVENTI 2018</h5>
+		<ul>
+			<li>Le CRYPTOWARS 2018 (gara di crittografia!) -- <a href="http://club.di.unimi.it/activities.html"> 15-21 ottobre</a></li>
+			<li>I nostri eventi territoriali: 
+				<ul>
+					<li>
+						De Cifris a Salerno -- 
+						<a class="toggleText" (click)="mostraEvento('salerno')">9 maggio</a>
+					</li>
+					<div *ngIf="eventoDaMostrare=='salerno'" style="width: 100%;">
+						<app-sessione-salerno></app-sessione-salerno>
+					</div>
+					<li>
+						De Cifris a Milano -- 
+						<a class="toggleText" (click)="mostraEvento('milano')">11 settembre</a>
+					</li>
+					<div *ngIf="eventoDaMostrare=='milano'">
+						<app-sessione-milano></app-sessione-milano>
+					</div>
+					<li>De Cifris a Roma -- 
+						<a class="toggleText" (click)="mostraEvento('roma')">4 ottobre</a>
+					</li>
+					<div *ngIf="eventoDaMostrare=='roma'">
+						<app-sessione-roma></app-sessione-roma>
+					</div>
+				</ul>
+			</li>
+			<li>I nostri eventi tematici: 
+				<ul>
+					<li>
+						Evento conoscitivo De Componendis Cifris -- 
+						<a class="toggleText" (click)="mostraEvento('eventoConoscitivo')">22 gennaio</a>
+					</li>
+					<div *ngIf="eventoDaMostrare=='eventoConoscitivo'">
+						<app-evento-conoscitivo></app-evento-conoscitivo>
+					</div>
+					<li>
+						Evento De Cifris - ITASEC 2018 -- 
+						<a class="toggleText" (click)="mostraEvento('itasec')">8 febbraio</a>
+					</li>
+					<div *ngIf="eventoDaMostrare=='itasec'">
+						<app-itasec></app-itasec>
+					</div>
+					<li>
+						Evento CifrisChain -- 
+						<a class="toggleText" (click)="mostraEvento('eventoCifrisChain')">17 dicembre</a>
+					</li>
+					<div *ngIf="eventoDaMostrare=='eventoCifrisChain'">
+						<app-evento-cifrischain></app-evento-cifrischain>
+					</div>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>

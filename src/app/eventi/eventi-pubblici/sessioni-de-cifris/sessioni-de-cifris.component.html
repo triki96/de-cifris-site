@@ -1,0 +1,109 @@
+<ng-sidebar-container>
+	<ng-sidebar opened="true" position="left" id="right-sidebar" mode="push" [autoCollapseWidth]="799"> 
+		<ul class="noIndent" align="left">
+			<li style="display:none">
+				<button autofocus="autofocus"></button>
+			</li>
+			<li>
+				<button class="btn btn-outline-info" (click)="goTo('sessioneTipo')">Sessione Tipo</button>
+			</li>
+			<li>
+				<button class="btn btn-outline-info" (click)="goTo('eventi')">Eventi</button>
+			</li>
+		</ul>
+	</ng-sidebar>
+	<div ng-sidebar-content class="container bottomExtra">
+		<br>
+		<div class="px-3 py-3">
+			<h3>SESSIONI DE CIFRIS</h3>
+			<p> Tra le numerose attività della De Componendis Cifris troviamo 
+				l'organizzazione di eventi pubblici qualificanti. Tra questi vi 
+				sono Sessioni De Cifris: si tratta di eventi distintivi con rilevanza 
+				spiccatamente territoriale (quindi da non confondere con i nostri eventi 
+				nazionali o i seminari locali), che permettono il confronto e il radicamento 
+				della De Cifris con le realtà presenti in una o più regioni vicine.</p>
+			<h5 id="sessioneTipo">UNA TIPICA SESSIONE</h5>
+			<p> Una Sessione rimane suddivisa in tre momenti: </p>
+			<ul>
+				<li> <i style="color: green;">istituzioni</i> - apriranno la sessione interventi da parte di rappresentanti delle Istituzioni; </li>
+				<li> <i style="color: red;">accademia</i> - seguiranno speaker accademici, che parleranno di Crittografia e/o argomenti correlati;</li>
+				<li> <i style="color: brown;">aziende</i> - concluderanno la sessione interventi da parte del mondo aziendale.</li>
+			</ul>
+			<p>La parte <font color=green>istituzionale</font> comprende un saluto da parte 
+				dell'Ente ospitante (ad esempio il Rettore, se si tratta di un'università),
+				un intervento da parte dell'organizzazione centrale della De Componendis Cifris. 
+				Successivamente seguiranno alcuni interventi	di saluto e/o incoraggiamento a 
+				proseguire nelle attività da parte sia di rappresentanti di istituzioni locali 
+				(ad esempio, un assessore di un comune o di una regione), sia di rappresentanti 
+				locali di istituzioni nazionali (ad esempio, un rappresentante delle Forze dell'Ordine,
+				della Magistratura, della Confindustria, dei Sindacati).</p>
+			<p>La parte <font color=red>accademica</font> vede alternarsi alcuni ricercatori membri 
+				della De Componendis Cifris, che possono (brevemente) esporre o un proprio argomento 
+				di ricerca (Crittografia o argomenti collegati), o un riassunto di argomenti di ricerca 
+				di un gruppo, oppure anche un'esperienza didattica (già avuta o in fase di pianificazione).<br>
+				I relatori accademici non sono tutti afferenti alla sede ospitante l'evento, anzi  
+				presentano al pubblico un ventaglio di realtà diversificato sul territorio.</p>
+			<p>La parte <font color=brown>aziendale</font> può essere molto variegata. Possiamo 
+				pensare a tre tipi di situazioni esemplificative:</p>
+			<ul>
+				<li>
+					<p>Ci sono aziende che sviluppano sistemi crittografici, o che comunque hanno propri prodotti in cui
+						la componente crittografica è importante (come firme digitali, sistemi di autenticazione, etc.);<br>
+						da queste ci aspettiamo una presentazione di un loro prodotto di punta oppure addirittura l'apertura 
+						di discussione su un aspetto innovativo di un loro prodotto/servizio, a cui i nostri membri possono 
+						dare un contributo creativo;</p>
+				</li>
+				<li>
+					<p>Ci possono essere anche aziende che utilizzano sistemi/standard crittografici sviluppati 
+						da altri e hanno il problema di usarli	al meglio; i loro interventi potrebbero spiegare 
+						le loro esigenze, puntando quindi a un contatto e una collaborazione con i nostri membri;</p>
+				</li>     
+				<li>
+					<p>Ci possono  essere aziende che per vocazione sono interessate a ricerca e innovazione tecnologica, 
+						e quindi utilizzano il loro intervento per presentarsi e cercare partner crittografici. </p>
+				</li>
+			</ul> 	
+			<p align="justify">La scelta degli interventi non è facile e viene fatta di comune accordo tra 
+				l'organizzazione centrale della De Componendis Cifris e un comitato locale che viene creato 
+				per l'occasione: il <b>Comitato De Cifris</b> (dell'evento).<br> Il Comitato De Cifris contiene 
+				esponenti di <b>tutte</b> le realtà di ricerca (con sedi nella regione) interessate alle attività 
+				dell'iniziativa; in particolare, la responsabilità della scelta degli speaker accademici è 
+				interamente del Comitato.
+			<h5 id="eventi">EVENTI</h5>
+			<p>Ne organizziamo due/tre ogni anno, con una scelta delle sedi basata su principi di 
+				turnazione e rappresentanza del nostro bel Paese: Nord Italia/Centro Italia/Sud Italia. </p>
+			<p>Per il 2019 le <b>Sessioni De Cifris</b> sono state:</p>
+			<ul>
+				<li>
+					<p>De Cifris incontra Torino --
+					<a class="toggleText" (click)="mostraCitta('torino')">14 ottobre 2018</a>;</p>
+					<div *ngIf="cittaDaMostrare=='torino'"><app-sessione-torino></app-sessione-torino></div>
+				</li>
+				<li>
+					<p>De Cifris incontra Perugia --
+					<a  class="toggleText"(click)="mostraCitta('perugia')">16 ottobre 2019</a>;</p>
+					<div *ngIf="cittaDaMostrare=='perugia'"><app-sessione-perugia></app-sessione-perugia></div>
+				</li>
+			</ul>
+			<p>Per il 2018 le <b>Sessioni De Cifris</b> sono state:</p>
+			<ul>
+				<li>
+					<p>De Cifris incontra Salerno --
+					<a class="toggleText" (click)="mostraCitta('salerno')">9 maggio 2018</a>.</p>
+					<div *ngIf="cittaDaMostrare=='salerno'"><app-sessione-salerno></app-sessione-salerno></div>
+				</li>
+				<li>
+					<p>De Cifris incontra Milano --
+					<a class="toggleText" (click)="mostraCitta('milano')">11 settembre 2018</a>;</p>
+					<div *ngIf="cittaDaMostrare=='milano'"><app-sessione-milano></app-sessione-milano></div>
+				</li>
+				<li>
+					<p>De Cifris incontra Roma --
+					<a class="toggleText" (click)="mostraCitta('roma')">4 ottobre 2018</a>;</p>
+					<div *ngIf="cittaDaMostrare=='roma'"><app-sessione-roma></app-sessione-roma></div>
+				</li>
+			</ul>
+			<hr>
+		</div>
+	</div>
+</ng-sidebar-container>

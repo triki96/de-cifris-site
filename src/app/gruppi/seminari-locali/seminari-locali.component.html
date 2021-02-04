@@ -1,0 +1,68 @@
+<ng-sidebar-container>
+	<ng-sidebar opened="true" position="left" id="right-sidebar" mode="push" [autoCollapseWidth]="799"> 
+		<ul class="noIndent" align="left">
+			<li style="display:none">
+				<button autofocus="autofocus"></button>
+			</li>
+			<li>
+				<button class="btn btn-outline-info" routerLink="/deCifrisAthesis">Athesis</button>
+			</li>
+			<li>
+				<button class="btn btn-outline-info" routerLink="/deCifrisAugustaeTaurinorum">Augustae Taurinorum</button>
+			</li>
+			<li>
+				<button class="btn btn-outline-info" routerLink="/deCifrisScholaLatina">Schola Latina</button>
+			</li>
+			<li>
+				<button class="btn btn-outline-info" routerLink="/deCifrisMediolanensibus">Mediolanensibus</button>
+			</li>
+		</ul>
+	</ng-sidebar>
+	<div ng-sidebar-content class="container bottomExtra">
+		<br>
+		<div class="mt-3">
+			<div class="row">
+				<div class="col-md-12">
+					<h3>SEMINARI LOCALI</h3>
+					<p> Tra le attività della De Cifris troviamo l'istituzione di seminari locali 
+						a tema crittografico. Per informazioni su come attivare un ciclo di seminari, 
+						leggere qui. I cicli attivi sono: 
+					</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<ul>
+						<li><a routerLink="/deCifrisAthesis" (click)="scegliSeminario('deCifrisAthesis')">De Cifris Athesis</a></li>
+						<li><a routerLink="/deCifrisAugustaeTaurinorum" (click)="scegliSeminario('deCifrisAugustaeTaurinorum')">De Cifris Augustae Taurinorum</a></li>
+						<li><a routerLink="/deCifrisScholaLatina" (click)="scegliSeminario('deCifrisScholaLatina')">De Cifris Schola Latina</a></li>
+						<li><a routerLink="/deCifrisMediolanensibus" (click)="scegliSeminario('deCifrisMediolanensibus')">De Cifris Mediolanensibus</a></li>
+					</ul>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-md-12">
+					<h4>PROSSIMI SEMINARI</h4>
+					<p style="color: crimson;">Avviso: causa dell'emergenza Coronavirus (Covid-19) organizzeremo i prossimi eventi in webinar.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<ul>
+						<li>
+							De Cifris Augustae Taurinorum
+							<ul>
+								<li> 5 Febbraio 2021 - 14:30 <br> 
+									Carlo Sanna -- <a href="https://www.polito.it/">Politecnico di Torino </a><br>
+									"Introduction to Multivariate Cryptography". <br>
+									<a href="../../../assets/attivita/seminariLocali/deCifrisAugustaeTaurinorum/locandina_Sanna.pdf">Locandina</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</ng-sidebar-container>

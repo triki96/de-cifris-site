@@ -1,0 +1,201 @@
+<!-- <mat-drawer-container class="example-container">
+	<mat-drawer mode="side" opened>Drawer content</mat-drawer>
+	<mat-drawer-content>Main content</mat-drawer-content>
+ </mat-drawer-container> -->
+
+ <div>
+	<ng-sidebar-container>
+		<ng-sidebar [opened]="opened" position="left" id="right-sidebar" mode="push" [autoCollapseWidth]="799">
+			<ul class="noIndent" align="left">
+				<!-- Utilizziamo questo trick per evitare di rendere visibile l'autofocus al lettore. -->
+				<li style="display:none">
+					<button autofocus="autofocus"></button>
+				</li>
+				<li>
+					<button class="btn btn-outline-info" (click)="goTo('stageTirocini')">
+						Stage e Tirocini
+					</button>
+				</li>
+				<li>
+					<button class="btn btn-outline-info" (click)="goTo('posiziosiAccademiche')">
+						Posizioni Accademiche
+					</button>
+				</li>
+				<li>
+					<button class="btn btn-outline-info" (click)="goTo('advisoryBoard')">
+						Advisory Board
+					</button>
+				</li>
+				<li>
+					<button class="btn btn-outline-info" (click)="goTo('borseAdvisoryBoard')">
+						Borse Advisory Board
+					</button>
+				</li>
+			</ul>
+			<!-- <button class="btn btn-outline-info" (click)="toggleSidebar()" style="position: absolute; bottom: 75px; left: 30;">
+				Nascondi
+			</button> -->
+		 </ng-sidebar>
+		<div ng-sidebar-content class="container bottomExtra">
+			<div class="mt-3">
+				<br>
+				<div class="row">
+					<div class="col-md-12">
+						<h3>OPPORTUNITÀ</h3>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<p>
+							In collaborazione con le numerose aziende associate, 
+							possiamo presentare opportunità interessanti per studenti e laureati. 
+							Da un lato offriamo la possibilità di stage, tirocini o lavoro, dall'altro,
+							grazie alle aziende che più strettamente collaborano con noi 
+							(e che formano l'Advisory Board De Cifris) finanziamo borse di studio per studenti 
+							magistrali dei Dipartimenti che hanno già attivato percorsi specifici di Crittografia. 
+						</p>
+					</div>
+				</div>
+				<hr>
+				<div class="row" id="stageTirocini">
+					<div class="col-md-12">
+						<h4>STAGE E TIROCINI</h4>
+						<p>
+							Uno degli obiettivi della De Componendis Cifris è incentivare in Italia lo studio e le 
+							ricerche nell'ambito della Crittografia a livello sia accademico sia applicativo, con 
+							particolare attenzione alle aree della Matematica, dell'Informatica e dell'Ingegneria.
+						</p>
+						<p>
+							Un modo per raggiungere questo obiettivo è stimolare una collaborazione tra studenti e 
+							aziende/enti tramite tirocini/stage. Nel concreto, intendiamo aiutare: 
+						</p>
+						<ul>
+							<li> Gli studenti a trovare enti/aziende che li possano ospitare. </li>
+							<li> Le aziende/enti a trovare candidati validi.</li>
+						</ul>
+						<p>
+							Il Coordinatore di questa attività è il prof. Massimo Giulietti (UNIPG).
+						</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<h5>COME CANDIDARSI</h5>
+						<p>Quindi ogni studente iscritto alla De Cifris può candidarsi direttamente attraverso la pagina 
+							<a href="https://www.linkedin.com/in/de-componendis-cifris-iniziativa-nazionale-8274501a5/">
+							LinkedIn De Cifris</a>, oppure scrivendo a segreteria@decfris.it e in CC al prof. Giulietti 
+							massimo.giulietti@unipg.it. Naturalmente, ci può contattare ogni azienda o ente che cerchi 
+							stagisti/tirocinanti/collaboratori in Crittografia. Noi aggiungeremo il loro avviso sulla 
+							nostra pagina LinkedIn dedicata. </p>
+					</div>
+				</div>
+				<hr>
+				<div class="row" id="posiziosiAccademiche">
+					<div class="col-md-12">
+						<h4>POSIZIONI ACCADEMICHE/RICERCA</h4>
+						<p>In questa pagina ospitiamo anche le posizioni bandite nel settore della Crittografia: </p>
+						<ul>
+							<li>
+								<p>Maitre de Conférence en Cryptographie -- Paris. <br>
+									An associate professor position in "Mathematics for Cryptography" (CNU 25 Section) will be 
+									advertised at the University of Paris 8 (synchronized session 2020). The assignment for 
+									research is planned for the LAGA's Arithmetic, Algebraic Geometry and Applications (AGAA) 
+									team and for teaching in the Mathematics Department of the MITSIC UFR (undergraduate teaching 
+									in Mathematics and Computer Science, and Master of Mathematics, particularly in the "Arithmetic, 
+									Coding and Cryptography" programme). For more details, contact prof. Martino Borello 
+									<a href="mailto:martino.borello@gmail.com">martino.borello@gmail.com </a></p>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<hr>
+				<div class="row" id="advisoryBoard">
+					<div class="col-md-12 center">
+						<h4>ADVISORY BOARD "DE CIFRIS"</h4>
+						<p>L'iniziativa De Componendis Cifris si propone di animare la comunità crittografica italiana, 
+							sia nelle sue componenti accademiche, sia nelle sue ramificazioni nel mondo del lavoro e dell'impresa. </p>
+						<p>L' Advisory Board "De Cifris" è formato da aziende ed enti interessati alla Crittografia.</p>
+						<p>I membri del Board instaurano una relazione continuativa con il mondo accademico crittografico, in particolare 
+							con le sedi universitarie italiane che propongono all'interno delle loro offerte formative dei percorsi orientati 
+							alla crittografia e alle sue applicazioni.</p>
+						<p>I membri del Board interagiscono con le sedi nei modi seguenti: </p>
+						<ul>
+							<li> Incontrano i docenti e suggeriscono competenze, che sarebbe utile gli studenti avessero, 
+								per entrare in modo agevole nel mondo del lavoro. </li>
+							<li> Offrono tirocini retribuiti ai laureandi/neolaureati che possono mettere in pratica le 
+								conoscenze acquisite durante il percorso di studio crittografico. </li>
+							<li> Discutono con i docenti l'istituzione di corsi specializzati per la formazione del personale aziendale. </li>
+							<li> Finanziano borse di studio destinate agli studenti meritevoli.</li>
+						</ul>
+						<p> Ad oggi sono tre le Università Italiane che forniscono all'interno della loro offerta 
+							didattica un percorso di laurea magistrale altamente specializzato: </p>
+						<ul>
+							<li> Il Dipartimento di Matematica e Informatica dell'Università degli Studi di Perugia, 
+								che offre all'interno del Corso di Laurea Magistrale in Matematica il curriculum: 
+								Matematica per la Crittografia. </li>
+							<li> Il Dipartimento di Matematica e Fisica dell'Università degli Studi Roma Tre, che offre 
+								all'interno del Corso di Laurea Magistrale in Scienze Computazionali, nel curriculum Gestione 
+								e Protezione dei Dati offre un percorso formativo in: Crittografia e Sicurezza dell'Informazione. </li>
+							<li> Il Dipartimento di Matematica dell'Università degli Studi di Trento, che offre all'interno del 
+								Corso di Laurea Magistrale in Matematica il curriculum: Cryptography. </li>
+						</ul>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<p> Entro il 30 Gennaio 2021 è aperta l'adesione di <a class="toggleText" 
+							(click)="visualizzaAziendeInteressate()">NUOVE AZIENDE INTERESSATE.</a></p>
+					</div>
+				</div>
+			
+				<div *ngIf="visualizzaNuoveAziendeInteressate;then visualizzare else nonVisualizzare"></div>    
+				<ng-template #visualizzare> <app-nuove-aziende-interessate></app-nuove-aziende-interessate> </ng-template>
+				<ng-template #nonVisualizzare> <hr> </ng-template>
+				
+				<div class="row" id="borseAdvisoryBoard">
+					<div class="col-md-12">
+						<h4>BORSE ADVISORY BOARD "DE CIFRIS"</h4>
+						<p>  I membri del Board instaurano una relazione continuativa con il mondo accademico crittografico, 
+							in particolare con le sedi universitarie italiane che propongono all'interno delle loro offerte 
+							formative dei percorsi orientati alla crittografia e alle sue applicazioni.
+							I membri del Board finanziano borse di studio: </p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<ul>
+							<li class="myListItem">
+								<h6>PERUGIA (2020/21):</h6>
+								<a href="http://www.dmi.unipg.it//dipartimento/bandi-e-selezioni/379-bando-per-borsa-di-studio-riservato-agli-studenti-iscritti-al-c-d-l-magistrale-in-matematica-curriculum-matematica-per-la-crittografia">
+									BORSE A PERUGIA - SCADENZA 18 SETTEMBRE</a>
+							</li>
+							<li class="myListItem">
+								<h6>TRENTO (2020/2021):</h6>
+								<a href="http://www.science.unitn.it/~sala/laurea/grants.html">BORSE A TRENTO - SCADENZA 26 GIUGNO</a>
+							</li>
+							<li class="myListItem">
+								<h6>ROMA TRE (2020/21):</h6>
+								<a href="http://www.uniroma3.it/articoli/pre-dipartimento-di-matematica-e-fisica-bando-di-concorso-per-borsa-di-studio-12729/">
+								BORSE A ROMA TRE - SCADENZA 7 LUGLIO</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<p>Le aziende che al momento hanno aderito sono:</p>
+						<ul>
+							<li> <a href="http://www.argentea.it"> Argentea </a> </li>
+							<li> <a href="http://www.bv-tech.it"> BV TECH </a> </li>
+							<li> <a  href="https://www.digitalinnovationhubvicenza.it/"> DIH Vicenza </a> </li>
+							<li> <a  href="https://www.gt50.org/"> GT50 </a> </li>
+							<li> <a href="https://it.nttdata.com">NTT DATA </a> </li>
+							<li> <a href="https://www.tasgroup.eu"> TAS group </a> </li>
+							<li> <a href="https://www.telsy.com">Telsy SPA </a> </li>
+							</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</ng-sidebar-container>
+</div>
