@@ -19,7 +19,7 @@ ng-sidebar-container{
 
 ::ng-deep .ng-sidebar{
 	background-color: aliceblue;
-	width: 225px;
+	width: 300px !important;
 	padding: 2em 1em;
 } ​
 
