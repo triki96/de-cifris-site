@@ -8,12 +8,12 @@
 		</li>
 		<li>
 			<button class="btn btn-outline-info" (click)="goTo('futuri')">
-				Eventi Futuri
+				Seminari Recenti
 			</button>
 		</li>
 		<li>
 			<button class="btn btn-outline-info" (click)="goTo('passati')">
-				Eventi Passati
+				Seminari Passati
 			</button>
 		</li>
 	</ul>
@@ -29,9 +29,9 @@
 				<li> Guglielmo Morgari, Telsy S.p.A.;</li>
 				<li> Fabio Fiori, Quadrans;</li>
 			</ul>
-			<hr>
-			<h4 id="futuri"><a (click)="mostraAttivita('futuri')">Seminari futuri</a></h4>
-			<div *ngIf="attivitaDaMostrare=='futuri'">
+			<hr id="futuri">
+			<h4><a (click)="toggleAttivita('futuri')">Seminari recenti</a></h4>
+			<div *ngIf="mostraFuturi">
 				<p class="warning">Avviso: causa dell'emergenza Coronavirus (Covid-19) organizzeremo i prossimi eventi in webinar. </p>
 				<!-- <ul>
 					<li>
@@ -47,9 +47,9 @@
 					</li>
 				</ul> -->
 			</div>
-			<hr>
-			<h4 id="passati"><a (click)="mostraAttivita('passati')">Seminari passati</a></h4>
-			<div *ngIf="attivitaDaMostrare=='passati'">
+			<hr id="passati">
+			<h4><a (click)="toggleAttivita('passati')">Seminari passati</a></h4>
+			<div *ngIf="mostraPassati">
 				<ul>
 					<li>
 						<b>5 Febbraio 2021:</b>
@@ -205,7 +205,7 @@
 			</div>
 			<hr>
 			<!-- <p>
-				Il coordinatore dei seminari locali: Roberto La Scala 
+				Il coordinatore dei seminari: Roberto La Scala 
 				<a href="mailto:roberto.lascala@uniba.it">roberto.lascala@uniba.it</a>.
 			</p>
 			<hr> -->

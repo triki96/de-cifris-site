@@ -8,12 +8,12 @@
 		</li>
 		<li>
 			<button class="btn btn-outline-info" (click)="goTo('futuri')">
-				Eventi Futuri
+				Seminari Recenti
 			</button>
 		</li>
 		<li>
 			<button class="btn btn-outline-info" (click)="goTo('passati')">
-				Eventi Passati
+				Seminari Passati
 			</button>
 		</li>
 	</ul>
@@ -29,14 +29,14 @@
 				<li> Daniele Venturi, Sapienza Università di Roma, Dipartimento di Infomatica.</li>
 				<li>  Giulio Codogni, Università	Tor Vergata, Dipartimento di Matematica;</li>
 			</ul>
-			<hr>
-			<h4 id="futuri"><a (click)="mostraAttivita('futuri')">Seminari futuri</a></h4>
-			<div *ngIf="attivitaDaMostrare=='futuri'">
+			<hr id="futuri">
+			<h4><a (click)="toggleAttivita('futuri')">Seminari recenti</a></h4>
+			<div *ngIf="mostraFuturi">
 				<p class="warning">Avviso: causa dell'emergenza Coronavirus (Covid-19) organizzeremo i prossimi eventi in webinar. </p>
 			</div>
-			<hr>
-			<h4 id="passati"><a (click)="mostraAttivita('passati')">Seminari passati</a></h4>
-			<div *ngIf="attivitaDaMostrare=='passati'">
+			<hr id="passati">
+			<h4><a (click)="toggleAttivita('passati')">Seminari passati</a></h4>
+			<div *ngIf="mostraPassati">
 				<ul>
 					<li>
 						<b>18 Gennaio 2021</b>

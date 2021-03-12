@@ -22,10 +22,15 @@ import { DecifrisAthesisComponent } from './gruppi/seminari-locali/decifris-athe
 import { DecifrisAugustaeTaurinorumComponent } from './gruppi/seminari-locali/decifris-augustae-taurinorum/decifris-augustae-taurinorum.component';
 import { DecifrisScholaLatinaComponent } from './gruppi/seminari-locali/decifris-schola-latina/decifris-schola-latina.component';
 import { DecifrisScholaMediolanensibusComponent } from './gruppi/seminari-locali/decifris-schola-mediolanensibus/decifris-schola-mediolanensibus.component';
+import { PerAziendeComponent } from './contenuti-specifici/per-aziende/per-aziende.component';
+import { PerAccademiaComponent } from './contenuti-specifici/per-accademia/per-accademia.component';
+import { PerStudentiComponent } from './contenuti-specifici/per-studenti/per-studenti.component';
+import { AderentiComponent } from './aderenti/aderenti.component';
 
 const routes: Routes = [
   {path : "", component : HomeComponent},
   {path: "obiettivi", component: ObiettiviComponent},
+  {path: "aderenti", component: AderentiComponent},
   {path: "mailingList", component: MailingListComponent},
   {path: "attivita", component: AttivitaComponent},
   {path: "seminariLocali", component: SeminariLocaliComponent},
@@ -44,7 +49,10 @@ const routes: Routes = [
   {path: "opportunita", component: OpportunitaComponent},
   {path: "eventi", component: EventiComponent},
   {path: "sessioni", component: SessioniDeCifrisComponent},
-  {path: "contatti", component: ContattiComponent}
+  {path: "contatti", component: ContattiComponent},
+  {path: "studenti", component: PerStudentiComponent},
+  {path: "aziende", component: PerAziendeComponent},
+  {path: "accademia", component: PerAccademiaComponent}
 ];
 
 @NgModule({

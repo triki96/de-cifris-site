@@ -1,15 +1,3 @@
-h4{
-	color:rgb(23, 162, 184);
-}
-
-h6 {
-	display: inline;
-}
-
-.notify{
-	color:rgb(23, 162, 184);
-}
-
 ng-sidebar-container{
 	position: fixed;
 	right: 0;
@@ -27,9 +15,4 @@ ng-sidebar-container{
 	#right-sidebar {
 		 display: none !important;
 	}
-}
-
-.bottomExtra{
-	margin-bottom: 3em;
-	padding-bottom: 3em;
 }

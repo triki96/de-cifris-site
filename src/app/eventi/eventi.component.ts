@@ -11,7 +11,9 @@ export class EventiComponent implements OnInit {
 
   sessioni: boolean = false;
   cittaDaMostrare: string = "";
-  eventiDaMostrare: string = "";
+  mostraFuturi: boolean = true;
+  mostraPassati: boolean = true;
+  /* eventiDaMostrare: string = ""; */
   /* eventoDaMostrare: string= ""; */
 
   constructor(
@@ -34,8 +36,14 @@ export class EventiComponent implements OnInit {
     this.cittaDaMostrare == s ? this.cittaDaMostrare = "" : this.cittaDaMostrare = s;
   }
 
+  toggleEventi(s: string){
+    /* this. eventiDaMostrare == s ? this.eventiDaMostrare = "": this.eventiDaMostrare = s; */
+    console.log(s);
+    s == 'futuri' ? this.mostraFuturi = !this.mostraFuturi : this.mostraPassati = !this.mostraPassati;
+  }
+
   mostraEventi(s: string){
-    this. eventiDaMostrare == s ? this.eventiDaMostrare = "": this.eventiDaMostrare = s;
+    s == 'futuri' ? this.mostraFuturi = true : this.mostraPassati = true;
   }
 
   sleep(ms) {
@@ -43,9 +51,10 @@ export class EventiComponent implements OnInit {
   }
 
   /* Ai posteri: utilizzare del codice asincrono (async/await) mi è sembrato l'unico 
-  modo per gestire la transizione della pagina alla sezione "eventi passati".*/
+  modo per gestire la transizione della pagina alla sezione "eventi passati". */
   async goTo(s : string){
-    this.eventiDaMostrare = s;
+    /* this.eventiDaMostrare = s; */
+    this.mostraEventi(s);
     await this.sleep(10);
     document.getElementById(s).scrollIntoView({behavior: 'smooth'});
   }

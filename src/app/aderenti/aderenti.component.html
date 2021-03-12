@@ -1,7 +1,13 @@
-	<div>
-			<hr>
+<ng-sidebar-container>
+	<ng-sidebar opened="true" position="left" id="right-sidebar" mode="push" [autoCollapseWidth]="799">
+	</ng-sidebar>
+	<div ng-sidebar-content class="container bottomExtra">
+		<br>
+		<div class="row">
+			<div class="col-md-12">
 			<h4>ADERENTI</h4>
-			<p>Tra gli aderenti della De Cifris, numerosi sono i ricercatori e professori.</p>
+			<p>Tra gli aderenti della DeCifris figurano svariate università, centri di ricerca e aziende private.
+				In particolare numerosi sono i ricercatori e professori.</p>
 			<p>Le sedi italiane che ospitano i nostri affiliati:</p>
 			<table>
 				<tbody>
@@ -113,8 +119,12 @@
 			<li> <font color="green">
 				Coordinatore <a routerLink="/didatticaUniversitaria" (click)="scegliAttivita('didatticaUniversitaria')">Didattica universitaria</a></font>: Prof. Nadir Murru, Università di Trento; </li>
 			<li> <font color="green">
-				Coordinatore <a routerLink="/seminariLocali" (click)="scegliAttivita('seminariLocali')">Seminari Locali</a></font>: Prof. Roberto La Scala, Università di Bari; </li>
+				Coordinatore <a routerLink="/seminariLocali" (click)="scegliAttivita('seminariLocali')">Seminari</a></font>: Prof. Roberto La Scala, Università di Bari; </li>
 			<li><font color="green">
 				Assistente a <i>Direzione</i> e <i>Presidenza</i></font>: Elisa Cermignani.</li>
 			</ul>
-</div>
+			</div>
+		</div>
+	</div>
+</ng-sidebar-container>
+	

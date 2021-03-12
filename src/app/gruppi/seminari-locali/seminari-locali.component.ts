@@ -11,18 +11,18 @@ export class SeminariLocaliComponent implements OnInit {
   tipoSeminario: string = "";
 
   constructor(
-    private servizioAttivita: AttivitaServiceService
+    /* private servizioAttivita: AttivitaServiceService */
   ) { }
 
   ngOnInit(): void {
     /* Necessario per evitare problemi con le children routes */
-    this.servizioAttivita.attivitaChanges.subscribe((s: string) => {
+    /* this.servizioAttivita.attivitaChanges.subscribe((s: string) => {
       s == 'seminariLocali' ? this.tipoSeminario = "" : "";  
-    });
+    }); */
   }
 
-  scegliSeminario(s: string){
+  /* scegliSeminario(s: string){
     s == this.tipoSeminario ? this.tipoSeminario = "" : this.tipoSeminario = s;
-  }
+  } */
 
 }
